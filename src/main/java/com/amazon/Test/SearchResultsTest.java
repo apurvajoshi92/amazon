@@ -51,7 +51,7 @@ public class SearchResultsTest extends BaseClass {
         homePage.openHomePage();
         //homePage.hoverOverElectronics();
         homePage.enterSearchTerm("IPhone 13 128 GB");
-        homePage.clickOnSuggestion("iphone 13 128 gb black");
+        homePage.clickOnSuggestion("iphone 13 128 gb 5g");
         productPage=homePage.clickOnProduct();
         String title=productPage.switchToWindow();
         boolean flag=true;
@@ -65,5 +65,15 @@ public class SearchResultsTest extends BaseClass {
             Assert.assertTrue(flag);
         }
         appleHomePage=productPage.clickOnAppleStoreLink();
+        Boolean result=appleHomePage.checkIfAppleWatchDropDownIsDisplyed();
+        if(result){
+            test.pass("Apple store page is displayed");
+            Assert.assertTrue(flag);
+        }else{
+            flag=false;
+            test.fail("Apple store page is not displayed");
+            Assert.assertTrue(flag);
+        }
+
     }
 }

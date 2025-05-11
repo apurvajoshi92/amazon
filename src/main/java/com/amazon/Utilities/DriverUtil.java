@@ -65,11 +65,16 @@ public class DriverUtil {
         //test.info("Click on  "+suggestion);
         wait.until(ExpectedConditions.visibilityOfElementLocated(searchSuggestions));
         List<WebElement> suggestions = driver.findElements(searchSuggestions);
+        Boolean flag=true;
         for (WebElement s : suggestions) {
             if (s.getText().equalsIgnoreCase(suggestion)) {
                 s.click();
+                flag=false;
                 break;
             }
+        }
+        if(flag){ //if product name is not in the list then select first product
+            suggestions.get(0).click();
         }
     }
 

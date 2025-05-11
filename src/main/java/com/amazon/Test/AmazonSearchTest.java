@@ -43,13 +43,13 @@ public class AmazonSearchTest extends BaseClass {
         homePage.openHomePage();
         //homePage.hoverOverElectronics();
         homePage.enterSearchTerm("IPhone 13 128 GB");
-        homePage.clickOnSuggestion("iphone 13 128 gb black");
+        homePage.clickOnSuggestion("iphone 13 128 gb 5g");
         productPage=homePage.clickOnProduct();
-        boolean result=productPage.clickOnAppleStoreLinkDisplayed();
+        boolean result=productPage.checkIfAppleStoreLinkDisplayed();
         Assert.assertTrue(result);
         if(result)
-            test.pass("Clicked on iphone 13 128 gb black");
+            test.pass("Clicked on iphone 13 128 gb 5g and phone details are displayed in new tab");
         else
-            test.fail("Apple phone detail page is not displyed");
+            test.fail("Apple phone detail page is not displayed in new tab");
     }
 }

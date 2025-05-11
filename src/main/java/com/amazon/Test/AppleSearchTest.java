@@ -31,7 +31,7 @@ public class AppleSearchTest extends BaseClass {
         homePage.openHomePage();
         //homePage.hoverOverElectronics();
         homePage.enterSearchTerm("IPhone 13 128 GB");
-        homePage.clickOnSuggestion("iphone 13 128 gb black");
+        homePage.clickOnSuggestion("iphone 13 128 gb 5g");
         productPage=homePage.clickOnProduct();
         String title=productPage.switchToWindow();
         boolean flag=true;

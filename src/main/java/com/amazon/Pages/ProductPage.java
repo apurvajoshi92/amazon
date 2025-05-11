@@ -9,9 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class ProductPage extends BaseClass {
     private DriverUtil driverUtil= new DriverUtil();
 
-    private By appleStoreLink = By.xpath("//a[text()='Visit the Apple Store']");
-    //Visit the Apple Store
-    //private By appleStoreLink = By.linkText("Visit the Apple Store");
+    private By appleStoreLink1 = By.xpath("//a[text()='Visit the Apple Store']");
+    //Visit the Apple Store//a[contains(text(),'Visit the')]
+    private By appleStoreLink = By.xpath("//a[contains(text(),'Visit the')]");
     public ProductPage() {
 
     }
@@ -22,7 +22,7 @@ public class ProductPage extends BaseClass {
         return new AppleHomePage();
     }
 
-    public boolean clickOnAppleStoreLinkDisplayed() {
+    public boolean checkIfAppleStoreLinkDisplayed() {
         test.info("check if apple store link displayed");
         return driverUtil.checkIfWebelementIsDisplyed(appleStoreLink);
     }

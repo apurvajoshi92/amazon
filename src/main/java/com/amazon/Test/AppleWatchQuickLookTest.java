@@ -33,7 +33,7 @@ public class AppleWatchQuickLookTest extends BaseClass {
         homePage.openHomePage();
         //homePage.hoverOverElectronics();
         homePage.enterSearchTerm("IPhone 13 128 GB");
-        homePage.clickOnSuggestion("iphone 13 128 gb black");
+        homePage.clickOnSuggestion("iphone 13 128 gb 5g");
         productPage=homePage.clickOnProduct();
         String title=productPage.switchToWindow();
         boolean flag=true;
@@ -53,11 +53,7 @@ public class AppleWatchQuickLookTest extends BaseClass {
         appleHomePage.clickOnQuickView();
         appleWatchQuickLookPage=appleHomePage.verifyQuickViewWindow();
         appleWatchQuickLookPage.hoverOverAppleWatchTooltip();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 
 }

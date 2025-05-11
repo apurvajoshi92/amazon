@@ -39,6 +39,10 @@ public class AppleHomePage extends BaseClass {
         test.info("Click on quick look");
         driverUtil.clickOnWebElement(appleWatchQuickLook);
     }
+    public boolean checkIfAppleWatchDropDownIsDisplyed() {
+        test.info("Click on quick look");
+        return driverUtil.checkIfWebelementIsDisplyed(appleWatchDropDown);
+    }
 
     public AppleWatchQuickLookPage verifyQuickViewWindow() {
         return new AppleWatchQuickLookPage();
