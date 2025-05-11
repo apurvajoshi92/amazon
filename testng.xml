@@ -1,0 +1,10 @@
+<suite name="AmazonAutomationSuite">
+    <test name="AmazonTests">
+        <classes>
+            <class name="com.amazon.Test.AmazonSearchTest"/>
+            <class name="com.amazon.Test.SearchResultsTest"/>
+            <class name="com.amazon.Test.AppleSearchTest"/>
+            <class name="com.amazon.Test.AppleWatchQuickLookTest"/>
+        </classes>
+    </test>
+</suite>
